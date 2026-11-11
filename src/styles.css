@@ -132,3 +132,29 @@ footer { min-height: 125px; display: flex; align-items: center; justify-content:
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+#appointments, #professionals, #professionals-title, #help, #reminder { scroll-margin-top: 94px; }
+.hero { padding-bottom: 30px; }
+.search-panel { transform: none; margin-top: 34px; }
+.appointments-section { padding-top: 54px; }
+.profile-button { cursor: default; }
+.filter-button { flex-shrink: 0; }
+.professionals-heading .filter-button { display: inline-flex; }
+.availability-row { text-transform: capitalize; }
+.slots button { min-height: 38px; }
+dialog.booking-modal { position: fixed; inset: 0; max-height: calc(100dvh - 32px); max-width: calc(100vw - 32px); padding: 0; border: 0; color: var(--ink); }
+dialog.booking-modal::backdrop { background: rgba(12,35,31,.58); backdrop-filter: blur(5px); }
+.booking-modal-body { padding: 30px; }
+.button.danger { background: #f9e8e4; color: #832d20; }
+.button.danger:hover { background: #f5d9d3; }
+.help-strip details { margin-top: 12px; font-size: 13px; }
+.help-strip summary { cursor: pointer; color: var(--primary-dark); font-weight: 700; }
+.reminder-card { grid-template-columns: auto 1fr auto; }
+button:focus-visible, a:focus-visible, summary:focus-visible { outline: 2px solid var(--primary-dark); outline-offset: 3px; }
+@media (max-width: 720px) {
+  .search-panel { margin-top: 24px; }
+  .appointments-section { padding-top: 40px; }
+  .appointment-card > .button { display: inline-flex; grid-column: 2; justify-self: start; }
+  .booking-modal-body { padding: 24px 18px; }
+  .professionals-heading .filter-button { padding: 7px; }
+}

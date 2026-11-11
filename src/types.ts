@@ -8,27 +8,18 @@ export interface Professional {
   id: number
   name: string
   specialty: Specialty
-  credential: string
   location: string
   initials: string
   accent: string
-  nextAvailable: string
-  slots: string[]
-}
-
-export interface Appointment {
-  id: number
-  dateLabel: string
-  day: string
-  month: string
-  time: string
-  professional: string
-  specialty: Specialty
-  location: string
-  status: 'Confirmado' | 'Pendiente'
+  availability: { date: string; times: string[] }[]
 }
 
 export interface BookingSelection {
-  professional: Professional
+  professionalId: number
+  date: string
   time: string
+}
+
+export interface Appointment extends BookingSelection {
+  status: 'Confirmado' | 'Pendiente'
 }
